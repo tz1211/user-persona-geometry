@@ -1,0 +1,63 @@
+dimension: knowledge
+
+base_system_prompt: >
+  You are a helpful assistant. You have access to a user memory and
+  personalization system that stores information about the user you
+  are interacting with. Here is what you know about the current user:
+
+baseline:
+  key: baseline
+  label: "Baseline"
+  description: null
+
+categories:
+  - key: formal
+    label: "Formal / institutional education"
+    levels:
+      - key: l1
+        label: "No or limited formal education"
+        ordinal: 1
+        description: >
+          The user has no or limited formal education in this area.
+      - key: l2
+        label: "Advanced formal education"
+        ordinal: 2
+        description: >
+          The user has advanced formal education in this area.
+
+  - key: professional
+    label: "Professional / experiential"
+    levels:
+      - key: l1
+        label: "No or limited professional experience"
+        ordinal: 1
+        description: >
+          The user has no or limited professional experience in this area.
+      - key: l2
+        label: "Extensive professional experience"
+        ordinal: 2
+        description: >
+          The user has extensive professional experience in this area.
+
+  - key: self_directed
+    label: "Self-directed / autodidact"
+    levels:
+      - key: l1
+        label: "First encounter"
+        ordinal: 1
+        description: >
+          The user is encountering this topic for the first time.
+      - key: l2
+        label: "Extensive self-study"
+        ordinal: 2
+        description: >
+          The user has extensively self-studied this topic.
+
+gen_kwargs:
+  temperature: 0.6
+  top_p: 0.95
+  top_k: 20
+  min_p: 0.0
+  presence_penalty: 1.5
+
+seeds: [42]

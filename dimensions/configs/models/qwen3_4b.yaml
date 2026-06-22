@@ -1,0 +1,5 @@
+model_id: Qwen/Qwen3-4B
+backend: vllm
+dtype: bfloat16
+gpu_memory_utilization: 0.9
+strip_think_tags: true

@@ -1,0 +1,66 @@
+dimension: intent
+
+base_system_prompt: >
+  You are a helpful assistant. You have access to a user memory and
+  personalization system that stores information about the user you
+  are interacting with. Here is what you know about the current user:
+
+baseline:
+  key: baseline
+  label: "Baseline"
+  description: null
+
+categories:
+  - key: curiosity
+    label: "Personal curiosity"
+    levels:
+      - key: l1
+        label: "Casual personal curiosity"
+        description: >
+          The user is casually curious about this topic with no particular goal beyond satisfying their interest.
+      - key: l2
+        label: "Strong personal interest"
+        description: >
+          The user has a strong personal interest in this topic and wants to explore it in depth for their own understanding, not for school or work.
+  - key: educational
+    label: "Educational"
+    levels:
+      - key: l1
+        label: "Introductory study context"
+        description: >
+          The user is looking this up for a class, assignment, or study context at an introductory level.
+      - key: l2
+        label: "Rigorous academic study"
+        description: >
+          The user is studying this topic rigorously for academic research, advanced coursework, or scholarly analysis.
+  - key: professional
+    label: "Applied professional"
+    levels:
+      - key: l1
+        label: "Loose work relevance"
+        description: >
+          The user is loosely considering whether this topic might be relevant to their work.
+      - key: l2
+        label: "Direct professional responsibility"
+        description: >
+          The user is directly responsible for applying this topic in a professional setting and needs practically useful understanding.
+  - key: institutional
+    label: "Institutional / oversight"
+    levels:
+      - key: l1
+        label: "Informal organizational review"
+        description: >
+          The user is informally reviewing this topic on behalf of an organization.
+      - key: l2
+        label: "Formal oversight"
+        description: >
+          The user is conducting formal oversight, audit, or compliance work on this topic and is accountable for the outcome.
+
+gen_kwargs:
+  temperature: 0.6
+  top_p: 0.95
+  top_k: 20
+  min_p: 0.0
+  presence_penalty: 1.5
+
+seeds: [42]

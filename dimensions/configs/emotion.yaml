@@ -1,0 +1,49 @@
+dimension: emotion
+
+base_system_prompt: >
+  You are a helpful assistant. You have access to a user memory and
+  personalization system that stores information about the user you
+  are interacting with. Here is what you know about the current user:
+
+baseline:
+  key: baseline
+  label: "Baseline"
+  description: null
+
+categories:
+  - key: circumplex
+    label: "Valence x arousal"
+    levels:
+      - key: high_positive
+        label: "Positive / high arousal"
+        valence: positive
+        arousal: high
+        description: >
+          The user is excited and energized.
+      - key: low_positive
+        label: "Positive / low arousal"
+        valence: positive
+        arousal: low
+        description: >
+          The user is calm and relaxed.
+      - key: high_negative
+        label: "Negative / high arousal"
+        valence: negative
+        arousal: high
+        description: >
+          The user is frustrated and impatient.
+      - key: low_negative
+        label: "Negative / low arousal"
+        valence: negative
+        arousal: low
+        description: >
+          The user is sad and deflated.
+
+gen_kwargs:
+  temperature: 0.6
+  top_p: 0.95
+  top_k: 20
+  min_p: 0.0
+  presence_penalty: 1.5
+
+seeds: [42]
