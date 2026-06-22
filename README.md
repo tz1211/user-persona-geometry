@@ -1,14 +1,12 @@
-# User Persona Geometry Replication
+# User Persona Subspaces Modulate Refusal Behavior in Language Models
 
-This repository contains the minimal code needed to reproduce the refusal and
-representation-geometry experiments from the paper. It does not include
-benchmark data, model outputs, activation caches, or generated figures.
+This repository accompanies our study of how language models internally represent user personas and how those representations modulate refusal behavior. We show that Knowledge, Intent, Emotion, and Belief are encoded as structured low-dimensional subspaces in activation space, and that directions within these subspaces predict and causally shift refusal behavior and inferred user profiles. Our paper can be found [here](). 
 
 ## Setup
 
 ```bash
-conda create -n persona-geometry python=3.12
-conda activate persona-geometry
+conda create -n user-persona-geometry python=3.12
+conda activate user-persona-geometry
 pip install -r requirements.txt
 ```
 
@@ -43,8 +41,7 @@ Evaluate refusals with a judge:
 bash scripts/02_evaluate_behavior.sh
 ```
 
-Build activation caches, contrastive persona vectors, and P4-on-P4 projection
-artifacts:
+Build activation caches, contrastive persona vectors, and P4-on-P4 projection artifacts:
 
 ```bash
 bash scripts/03_build_representations.sh
@@ -98,5 +95,5 @@ results/trait_choice_probe/<model-id>/
 figs/
 ```
 
-The repository is intentionally data-free. If you move this directory out as a
-standalone repository, run commands from the new repository root.
+## License 
+This project is licensed under the Apache License 2.0 — see the [LICENSE](./LICENSE) file for details. 
