@@ -95,5 +95,15 @@ results/trait_choice_probe/<model-id>/
 figs/
 ```
 
+## Citation 
+```text
+@article{zhou2026user,
+  title = {User Persona Subspaces Modulate Refusal Behavior in Language Models},
+  author = {Zhou, Yan and Zhang, Shichang and Xiong, Zidi and Lakkaraju, Himabindu},
+  journal = {ICML Workshop on Mechanistic Interpretability},
+  year = {2026},
+}
+```
+
 ## License 
 This project is licensed under the Apache License 2.0 — see the [LICENSE](./LICENSE) file for details. 
