@@ -1,6 +1,6 @@
 # User Persona Subspaces Modulate Refusal Behavior in Language Models
 
-This repository accompanies our study of how language models internally represent user personas and how those representations modulate refusal behavior. We show that Knowledge, Intent, Emotion, and Belief are encoded as structured low-dimensional subspaces in activation space, and that directions within these subspaces predict and causally shift refusal behavior and inferred user profiles. Our paper can be found [here](). 
+This repository accompanies our study of how language models internally represent user personas and how those representations modulate refusal behavior. We show that Knowledge, Intent, Emotion, and Belief are encoded as structured low-dimensional subspaces in activation space, and that directions within these subspaces predict and causally shift refusal behavior and inferred user profiles. Our paper can be found [here](https://openreview.net/forum?id=F9oy1ouIef). 
 
 ## Setup
 
